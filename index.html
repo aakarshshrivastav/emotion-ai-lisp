@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Emotion Detection AI System</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="app-shell">
+      <section class="workspace">
+        <header class="topbar">
+          <div>
+            <p class="eyebrow">Common Lisp AI System</p>
+            <h1>Emotion Detection from Text or Speech</h1>
+          </div>
+          <div class="status-pill" id="aiStatus">AI ready</div>
+        </header>
+
+        <section class="input-panel" aria-label="Emotion input">
+          <div class="input-header">
+            <label for="emotionInput">Enter text or speak a sentence</label>
+            <button class="icon-button" id="micButton" type="button" title="Start speech input" aria-label="Start speech input">
+              <span>Mic</span>
+            </button>
+          </div>
+          <textarea
+            id="emotionInput"
+            rows="7"
+            placeholder="Example: I am excited about this project, but a little nervous about the presentation."
+          ></textarea>
+          <div class="actions">
+            <button id="analyzeButton" type="button">Analyze Emotion</button>
+            <button id="sampleButton" class="secondary" type="button">Try Sample</button>
+            <button id="clearButton" class="ghost" type="button">Clear</button>
+          </div>
+        </section>
+
+        <section class="result-grid" aria-label="Emotion analysis results">
+          <article class="primary-result">
+            <p class="panel-label">Detected Emotion</p>
+            <div class="emotion-display" id="emotionDisplay">Neutral</div>
+            <p class="confidence" id="confidenceText">Confidence: 0%</p>
+            <div class="meter" aria-hidden="true">
+              <div id="confidenceBar"></div>
+            </div>
+            <p class="result-note" id="resultNote">Add a sentence to begin symbolic and perceptron-based reasoning.</p>
+          </article>
+
+          <article class="panel">
+            <p class="panel-label">Perceptron Scores</p>
+            <div class="score-list" id="scoreList"></div>
+          </article>
+        </section>
+
+        <section class="reasoning-grid" aria-label="AI reasoning methods">
+          <article class="panel">
+            <p class="panel-label">Forward Chaining</p>
+            <ul id="forwardFacts" class="fact-list"></ul>
+          </article>
+          <article class="panel">
+            <p class="panel-label">Backward Chaining</p>
+            <ul id="backwardProof" class="fact-list"></ul>
+          </article>
+          <article class="panel wide">
+            <p class="panel-label">Lisp AI Concepts Used</p>
+            <div class="concepts">
+              <span>Common Lisp engine</span>
+              <span>Knowledge base</span>
+              <span>Production rules</span>
+              <span>Inference engine</span>
+              <span>Forward chaining</span>
+              <span>Backward chaining</span>
+              <span>Perceptron scoring</span>
+              <span>Explainable AI</span>
+            </div>
+            <p class="result-note lisp-note">
+              Core AI source: <a href="emotion-ai.lisp">emotion-ai.lisp</a>. The browser UI mirrors the Lisp rules for live demo use.
+            </p>
+          </article>
+        </section>
+      </section>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>
